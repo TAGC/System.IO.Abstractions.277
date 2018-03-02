@@ -1,0 +1,8 @@
+image: Visual Studio 2017
+before_build:
+  - ps: nuget restore
+build_script:
+  - ps: dotnet build
+test_script:
+  - ps: dotnet run --project System.IO.Abstractions.277
+deploy: off
